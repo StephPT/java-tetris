@@ -1,8 +1,8 @@
 package com.steph.tectris.pieces;
 
-import com.steph.tectris.core.AbstractPiece;
+import com.steph.tectris.core.Piece;
 
-public class S extends AbstractPiece {
+public class S extends Piece {
 
     public S() {
         super();

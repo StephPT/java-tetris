@@ -4,9 +4,9 @@ import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public abstract class AbstractPiece {
+public abstract class Piece {
 
-    protected AbstractPiece() {
+    protected Piece() {
         grid = Grid.getInstance();
     }
 
@@ -34,7 +34,7 @@ public abstract class AbstractPiece {
 
     public static final Color Z = Color.red;
 
-    public void down() throws InterruptedException {
+    public void down() {
         for (int i = locations.size(); i > 0; i--) {
             Grid grid = locations.get(i - 1);
             Point point = new Point(grid.getLocation());
@@ -57,7 +57,7 @@ public abstract class AbstractPiece {
 
     public abstract void rotate();
 
-    public AbstractPiece create() {
+    public Piece create() {
         for(int i = 0; i < pieces.length; i++) {
             for(int l = 0; l < pieces[i].length; l++) {
                 int x = 5;

@@ -1,11 +1,8 @@
 package com.steph.tectris.pieces;
 
-import com.steph.tectris.core.AbstractPiece;
-import com.steph.tectris.core.Grid;
+import com.steph.tectris.core.Piece;
 
-import java.awt.*;
-
-public class T extends AbstractPiece {
+public class T extends Piece {
 
     public T() {
         super();

@@ -1,6 +1,6 @@
 package com.steph.tectris;
 
-import com.steph.tectris.core.AbstractPiece;
+import com.steph.tectris.core.Piece;
 import com.steph.tectris.core.Grid;
 import com.steph.tectris.pieces.*;
 import com.steph.tectris.window.GameWindow;
@@ -20,7 +20,7 @@ public class Application {
         GameWindow.getInstance().getFrame().setVisible(true);
 
         AtomicBoolean run = new AtomicBoolean(true);
-        AbstractPiece currentPiece = randomPiece();
+        Piece currentPiece = randomPiece();
         while(run.get()) {
             if(!currentPiece.isFinished()) {
                 try {
@@ -52,8 +52,8 @@ public class Application {
 
     }
 
-    private static AbstractPiece randomPiece() {
-        AbstractPiece result = null;
+    private static Piece randomPiece() {
+        Piece result = null;
         Random ran = new Random();
         int nextPiece = ran.nextInt(7);
         switch (nextPiece) {
